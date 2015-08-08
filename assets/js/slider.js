@@ -24,8 +24,8 @@
 			width : 400, //int, widget width
 			loopTime : 5000, //int, slider loop time
 			transTime : 300, //int, slider transition time
-			autoPrevNext : true, //boolean, whether show previous & next button only when mouse over
-			showPoint : true, //boolean, whether show index point of each slider item
+			autoPrevNext : true, //boolean, whether show previous & next button only when mouse over or not
+			showPoint : true, //boolean, whether show index point of each slider item or not
 			pointClick : true,//boolean, the index points can be click or not
 			loopCallBack : null, //function, if this method is provided, it will be called after each time the slide finish
 			description : null  //array, the descriptions of slider items, pay attention to the index
