@@ -2,15 +2,15 @@
  * @ a slider widget depends on jQuery/Zepto
  * @ author: James
  * @ usage:
- 	 dom:
- 	 	<div id="mySlider" class="slider-box"> <!-- container -->
-		    <div class="slider-wrapper"> <!-- wrapper -->
-			    <div class="slider-item"> <!-- slider item-->
-				    <img src="1.png" alt=""/>
-			    </div>
-				......
-		    </div>
-	     </div>
+ *	 dom:
+ *	 	<div id="mySlider" class="slider-box"> <!-- container -->
+ *		    <div class="slider-wrapper"> <!-- wrapper -->
+ *			    <div class="slider-item"> <!-- slider item-->
+ *				    <img src="1.png" alt=""/>
+ *			    </div>
+ *				......
+ *		    </div>
+ *	     </div>
  *   create:
  *       $(".slider-box").slider(configObject);
  *   method:
@@ -34,6 +34,7 @@
 			_oself = this;
         this.config = $.extend(defaultConf, customConf);
         var _init = function (){ 
+        	_oself.data("init") && _oself.remove();
         	_browserCheck();
         	_initDom();
         	_initStyle();
@@ -41,6 +42,7 @@
         	_createPrevNext();
         	_createPoint();
         	_createDescription();
+        	_oself.data("init", true);
         }
         var _browserCheck = function (){ 
 			var tem,
