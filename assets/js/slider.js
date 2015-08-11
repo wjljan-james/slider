@@ -101,13 +101,9 @@
         		_startLoop();
         		return false;
         	});
-        	if (_oself.config.autoPrevNext){
-        		$(".slider-control").on("mouseover mouseout", function (e){ 
-					$(this).find("img").toggleClass("slider-hidePrevNext");
-	        	});
-	        } else {
-	        	$(".slider-control").find("img").css("visibility", "visible");
-	        }
+        	_oself.config.autoPrevNext ? $(".slider-control").on("mouseover mouseout", function (e){ 
+				$(this).find("img").toggleClass("slider-hidePrevNext");
+        	}) : $(".slider-control").find("img").css("visibility", "visible");
         }
         var _createPoint = function (){ 
         	if (_oself.config.showPoint){
